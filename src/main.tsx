@@ -1,10 +1,10 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './components/App/App.js';
-import './styles/index.scss'
-import '@a1rth/css-normalize'
+import "@a1rth/css-normalize";
+import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import App from "./components/App/App.js";
+import "./styles/index.scss";
 
-createRoot(document.getElementById('root') as HTMLElement).render(
+createRoot(document.getElementById("root") as HTMLElement).render(
     <StrictMode>
         <App />
     </StrictMode>,
