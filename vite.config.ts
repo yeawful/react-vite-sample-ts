@@ -1,19 +1,22 @@
-import react from "@vitejs/plugin-react";
-import path from "path";
-import { defineConfig } from "vite";
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-    plugins: [react()],
-    css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: `@use "@/styles/variables" as *;`,
-            },
-        },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-        },
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss'],
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "@/styles/variables" as *;
+        `,
+      },
     },
+  },
 });

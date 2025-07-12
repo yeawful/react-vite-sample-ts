@@ -1,5 +1,5 @@
-build/
-node_modules/
-*.d.ts
-vite.config.ts
-.md
+node_modules
+dist
+dist-ssr
+*.local
+public
