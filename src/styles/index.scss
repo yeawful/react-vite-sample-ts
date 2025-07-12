@@ -1,5 +1,5 @@
-@use '@/styles/variables' as *;
-@use '@a1rth/css-normalize' as *;
+@import '@/styles/variables';
+@import '@a1rth/css-normalize';
 
 body {
   background-color: $color-background;
